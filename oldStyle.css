@@ -1,0 +1,650 @@
+* {
+	transition-duration: 0.5s;
+	text-align: center;
+	font-family: "Lucida Console", "Courier New", monospace;
+	table-align: center;
+	margin: auto;
+}
+
+*:focus {
+	outline: thin dotted white;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--color);
+	overflow: hidden;
+	--background: #0f0f0f;
+	--color: #dfdfdf;
+	--points: #ffffff;
+}
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+}
+
+td {
+	padding: 0
+}
+
+.upgTable {
+	display: flex !important;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.upgRow {
+	display: flex !important;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.upgAlign {
+	height: 120px;
+	vertical-align: 0
+}
+
+h1, h2, h3, b, input {
+	display: inline;
+}
+
+.treeNode {
+	height: 100px;
+	width: 100px;
+	border: 1px solid black;
+	border-radius: 50%;
+	font-size: 40px;
+}
+
+.locked {
+	background-color: #9c6e6e !important;
+	cursor: not-allowed;
+}
+
+.can {
+	cursor: pointer;
+}
+
+.can:hover {
+	transform: scale(1.15, 1.15);
+}
+
+.treeNode.notify {
+	transform: scale(1.1, 1.1);
+	box-shadow: var(--hqProperty2a), 0px 0px 20px #ff0000 !important;
+	z-index: 3
+}
+
+.bought {
+	background-color: #68a66b !important;
+	cursor: default;
+}
+
+.back {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: var(--background);
+	border: 1px solid var(--background);
+	color: var(--color);
+	font-size: 40px;
+	cursor: pointer;
+}
+
+.back:hover {
+	transform: scale(1.1, 1.1);
+	text-shadow: 0px 0px 7px var(--color);
+}
+
+.reset {
+	height: 100px;
+	width: 150px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.upg {
+	height: 120px;
+	width: 120px;
+	border-radius: 25%;
+	border: 1px solid black;
+	font-size: 10px;
+}
+
+.upgBig {
+	height: 200px;
+	width: 200px;
+	border-radius: 25%;
+	border: 1px solid black;
+}
+
+.longUpg {
+	height: 50px;
+	width: 120px;
+	border-radius: 50%;
+	border: 1px solid black;
+	font-size: 10px;
+}
+
+.smallUpg {
+	height: 40px;
+	width: 40px;
+	border-radius: 25%;
+	border: 1px solid black;
+}
+
+.p {
+	background-color: #439ea3;
+	text-shadow: 0px 0px 10px #439ea3;
+}
+
+.p_txt {
+	color: #00bfbf;
+	text-shadow: 0px 0px 10px #00bfbf;
+}
+
+.b {
+	background-color: #415a9e;
+	color: black;
+}
+
+.b_txt {
+	color: #415a9e;
+	text-shadow: 0px 0px 10px #415a9e;
+}
+
+.g {
+	background-color: #409c6e;
+	color: black;
+}
+
+.g_txt {
+	color: #409c6e;
+	text-shadow: 0px 0px 10px #409c6e;
+}
+
+.e {
+	background-color: #9643a3;
+	color: black;
+}
+
+.e_txt {
+	color: #9643a3;
+	text-shadow: 0px 0px 10px #9643a3;
+}
+
+.t {
+	background-color: #3f993d;
+	color: black;
+}
+
+.t_txt {
+	color: #3f993d;
+	text-shadow: 0px 0px 10px #3f993d;
+}
+
+.s {
+	background-color: white;
+	color: black;
+}
+
+.s_txt {
+	color: white;
+	text-shadow: 0px 0px 10px white;
+}
+
+.sb {
+	background-color: #415a9e;
+	color: black;
+}
+
+.sb_txt {
+	color: #415a9e;
+	text-shadow: 0px 0px 10px #415a9e;
+}
+
+.h {
+	background-color: #a14040;
+	color: black;
+}
+
+.h_txt {
+	color: #a14040;
+	text-shadow: 0px 0px 10px #a14040;
+}
+
+.q {
+	background-color: #ff2bf2;
+	color: black;
+}
+
+.q_txt {
+	color: #ff2bf2;
+	text-shadow: 0px 0px 10px #ff2bf2;
+}
+
+.hb {
+	background-color: #513d94;
+	color: black;
+}
+
+.hb_txt {
+	color: #513d94;
+	text-shadow: 0px 0px 10px #513d94;
+}
+
+.ss {
+	background-color: white;
+	color: black;
+}
+
+.ss_txt {
+	color: white;
+	text-shadow: 0px 0px 10px white;
+}
+
+.m {
+	background-color: #eb34c0;
+	color: black;
+}
+
+.m_txt {
+	color: #eb34c0;
+	text-shadow: 0px 0px 10px #eb34c0;
+}
+
+.ba {
+	background-color: #ebc88f;
+	color: black;
+}
+
+.ba_txt {
+	color: #ebc88f;
+	text-shadow: 0px 0px 10px #ebc88f;
+}
+
+.sg {
+	background-color: #409c6e;
+	color: black;
+}
+
+.sg_txt {
+	color: #409c6e;
+	text-shadow: 0px 0px 10px #409c6e;
+}
+
+.sp {
+	background-color: #439ea3;
+	color: black;
+}
+
+.sp_txt {
+	color: #439ea3;
+	text-shadow: 0px 0px 10px #439ea3;
+}
+
+.l {
+	background-color: #7fbf7f;
+	color: black;
+}
+
+.l_txt {
+	color: #7fbf7f;
+	text-shadow: 0px 0px 10px #7fbf7f;
+}
+
+.ps {
+	background-color: #b38fbf;
+	color: black;
+}
+
+.ps_txt {
+	color: #b38fbf;
+	text-shadow: 0px 0px 10px #b38fbf;
+}
+
+.hs {
+	background-color: #dfdfff;
+	color: black;
+}
+
+.hs_txt {
+	color: #dfdfff;
+	text-shadow: 0px 0px 10px #dfdfff;
+}
+
+.i {
+	background-color: #e5dab7;
+	color: black;
+}
+
+.i_txt {
+	color: #e5dab7;
+	text-shadow: 0px 0px 10px #e5dab7;
+}
+
+.mb {
+	background-color: #ff9f7f;
+	color: black;
+}
+
+.mb_txt {
+	color: #ff9f7f;
+	text-shadow: 0px 0px 10px #ff9f7f;
+}
+
+.ge {
+	background-color: #bfbfbf;
+	color: black;
+}
+
+.ge_txt {
+	color: #bfbfbf;
+	text-shadow: 0px 0px 10px #bfbfbf;
+}
+
+.ma {
+	background-color: #9f9f9f;
+	color: black;
+}
+
+.ma_txt {
+	color: #9f9f9f;
+	text-shadow: 0px 0px 10px #9f9f9f;
+}
+
+#optionWheel {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+
+#optionWheel:hover {
+	transform: rotate(360deg);
+}
+
+#info {
+	font-size: 20px;
+	color: white;
+	position: absolute;
+	top: 50px;
+	left: 4px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #02f2f2;
+}
+
+#info:hover {
+	transform: scale(1.2, 1.2);
+	text-shadow: 5px 0px 10px #02f2f2,
+              -3px 0px 12px #02f2f2;
+}
+
+#discord {
+	position: absolute;
+	top: 120px;
+	left: 4px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer
+}
+
+#discord:hover {
+	transform: scale(1.2, 1.2);
+}
+
+#version {
+	position: absolute;
+	right: 8px;
+	top: 4px;
+	text-align: right;
+	color: var(--points);
+	text-shadow: 0px 0px 10px var(--points);
+	cursor: pointer;
+}
+
+#version:hover {
+	transform: scale(1.1, 1.1);
+	right: 9.6px;
+}
+
+a {
+	color: #007fff;
+	text-decoration-line: none;
+	cursor: pointer
+}
+
+.link {
+	display: block;
+	font-size: 20px;
+	color: #41f5f5;
+	text-decoration-line: none;
+	cursor: pointer;
+	width: 100%;
+	min-width: 100%;
+	font-family: "Lucida Console", "Courier New", monospace;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #02f2f2;
+	text-decoration: none;
+}
+
+.link:hover {
+	transform: scale(1.2, 1.2);
+	text-shadow: 5px 0px 10px #02f2f2,
+              -3px 0px 12px #02f2f2;
+	width: 80%;
+	min-width: 80%;
+}
+
+.opt {
+	height: 100px;
+	width: 100px;
+	border-radius: 25%;
+	border: 1px solid black;
+	border-radius: 25%;
+	background-color: #a1a1a1;
+	color: black;
+	cursor: pointer;
+}
+
+.opt:hover {
+	background-color: #439ea3;
+}
+
+.hidden {
+	visibility: hidden;
+	height: 50px !important;
+}
+
+.canvas {
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -999;
+}
+
+.milestone {
+	width: 100%;
+	height: 75px;
+	background-color: #9e6d64;
+}
+
+.milestoneDone {
+	width: 100%;
+	height: 75px;
+	background-color: #68a66b;
+	color: black;
+}
+
+.left {
+	position: absolute;
+	left: 0;
+}
+
+.remove {
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
+.remove:hover {
+	transform: scale(1.1, 1.1);
+}
+
+.col {
+	min-width: 49.5%;
+	max-width: 49.5%;
+	width: 49.5%;
+	height: 100%;
+	min-height: 100%;
+	column-span: 1;
+	position: absolute;
+	overflow-y: auto;
+	overflow-x: auto;
+	transition-duration: 0s
+}
+
+.col.right {
+	top: 0;
+	right: 0;
+}
+
+#app {
+	column-count: 2;
+	column-width: 50%;
+	min-height: 100%;
+}
+
+.vl {
+	border-left: 6px solid var(--color);
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	margin-left: -3px;
+	top: 0
+}
+
+ul {
+	list-style-type: none;
+}
+
+.hChall {
+	background-color: #fa7f8a;
+	border: 4px solid #ff0017;
+	color: #ff0017;
+	width: 300px;
+	height: 300px;
+	border-radius: 33.33%;
+}
+
+.hChall.done {
+	background-color: #95fcb4;
+	border: 4px solid #038c2c;	
+	color: #038c2c;
+}
+
+.hChall.canComplete {
+	background-color: #93f0fa;
+	border: 4px solid #03858f;	
+	color: #03858f;
+}
+
+.fullWidth {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	min-width: 100%;
+	overflow-y: auto;
+	overflow-x: auto;
+	transition-duration: 0s
+}
+
+.machine {
+	background-color: #c9c9c9;
+	border: 4px solid;
+	border-color: rgba(0, 0, 0, 0.125);
+	color: rgba(0, 0, 0, 0.5);
+	width: 200px;
+	height: 200px;
+	font-size: 15px;
+	border-radius: 33.33%;
+}
+
+#loadingSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+[tooltip] {
+	position: relative;
+	z-index: 2
+}
+
+[tooltip]:before,
+[tooltip]:after {
+	visibility: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	pointer-events: none;
+	white-space: pre-wrap;
+}
+
+[tooltip]:before {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-bottom: 5px;
+	margin-left: -80px;
+	padding: 7px;
+	width: 160px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: var(--background_tooltip);
+	color: var(--points);
+	content: attr(tooltip);
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.2;
+	transition-duration: 0.5s;
+	white-space: pre-wrap;
+}
+
+[tooltip]:after {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	width: 0;
+	border-top: 5px solid var(--background_tooltip);
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	content: " ";
+	font-size: 0;
+	line-height: 0;
+	transition-duration: 0.5s;
+	white-space: pre-wrap;
+}
+
+[tooltip]:hover:before,
+[tooltip]:hover:after {
+	visibility: visible;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+	white-space: pre-wrap;
+}
